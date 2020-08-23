@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/ace_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img id="acelogo" src="images/ace_logo.png" alt="acelogo">
+        <h2 id="logo">ACE FITNESS</h2>
+        <ul class="nav_links">
+            <li><a href="index.html" id="home">HOME</a></li>
+            <li><a href="#">CLOTHING</a>
+                <div class="clothing_submenu">
+                    <ul>
+                        <li><a href="#" id="mens">ALL MENS</a>
+                        <li><a href="#" id="womens">ALL WOMENS</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" id="aboutUs">ABOUT US</a></li>
+            <li><a href="#" id="yourCart">CONTACT US/CHECK OUT</a></li>
+        </ul>
+    </nav>
+    <div class="homePage">
+        <div class="feat">
+            <img id='yoga' src="images/yoga.jpg" alt="yoga">
+            <div class="Featured">
+                <h4>Ace Fitness <i>"Lux"</i> Yoga Collection Has Arrived</h4><br>
+                <a href="#" id="currentFeatured">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="news">
+            <img id="dl" src="images/deadlift.jpg" alt="deadlift">
+            <div class="Newsletter">
+                <h4>Subscribe to our Newsletter to get the latest deals</h4><br>
+                <a href="#signup" id="signup-btn">SIGN UP</a>
+            </div>
+        </div>
+        <div class="socials">
+            <img id="shoetie" src="images/shoetie.jpg" alt="showtie">
+            <div class="socialMedia">
+                <h4>We understand that life moves fast. Follow us on our socials when you're on the go.</h4><br>
+                <a href="#signup_logo" id="socials-btn">SOCIALS</a>
+            </div>
+        </div>
+        <div class="bg-modal">
+            <div class="modal-content">
+                <img id="signup-logo1" src="images/acelogo_white.png" alt="acelogo">
+                <form id="signup" action="https://formspree.io/mknqydgz" method="POST">
+                    NAME <br><input type="text" name="custName" required> <br>
+                    EMAIL <br><input type="email" name="custEmail" required> <br>
+                    <input type="submit" name="submitBtn" value="SUBMIT">
+                </form>
+                <span class="close-modal">X</span>
+            </div>
+        </div>
+        <div class="bg-modalSocial">
+            <div class="social-modal-content">
+                <img id="signup-logo2" src="images/acelogo_white.png" alt="acelogo">
+                <div class="socialLogos">
+                    <img src="images/facebook.png" alt="facebook">
+                    <img src="images/twitter.png" alt="twitter">
+                    <img src="images/insta.png" alt="instagram">
+                </div>
+                <span class="close-social-modal">X</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dynamic-nav">
+        <ul class="dynamic-navlinks-mens">
+            <li><a href="#" id="m-shirts">SHIRTS</a></li>
+            <li><a href="#" id="m-tanktops">TANK TOPS</a></li>
+            <li><a href="#" id="m-shorts">SHORTS</a></li>
+            <li><a href="#" id="m-joggers">JOGGERS</a></li>
+        </ul>
+
+        <ul class="dynamic-navlinks-womens">
+            <li><a href="#" id="w-shirts">SHIRTS</a></li>
+            <li><a href="#" id="w-tanktops">TANK TOPS</a></li>
+            <li><a href="#" id="w-shorts">SHORTS</a></li>
+            <li><a href="#" id="w-pants">YOGA PANTS</a></li>
+        </ul>
+    </div>
+
+    <h1 class="dynamicHeader">PLACE_HOLDER_TEXT</h1>
+    <div class="aboutUs"></div>
+    <div class="yourCart">
+        <div class="cartStatus">
+            <p id="cart-content">Your Cart Is Currently Empty</p>
+        </div>
+        <div class="customerInformation">
+            <h1>Customer Check Out Information</h1> <br>
+            <form id="custInfo" action="https://httpbin.org/post" method="POST" onsubmit="return validateForm ();">
+                <h2>Contact Information</h2> <br>
+                <div id="error"></div>
+                <input type="text" name="fName" placeholder="FIRST NAME" id="fName" required> <br>
+                <input type="text" name="lastName" placeholder="LAST NAME" id="lName" required> <br>
+                <input type="email" name="email" placeholder="EMAIL ADDRESS" required> <br>
+                <div class="typeof">
+                    <input type="radio" id="orderProb" name="typeOf" value="orderProb">
+                    <label for="orderProb">Order Problem</label>
+                    <input type="radio" id="Question" name="typeOf" value="Question">
+                    <label for="Question">Question</label>
+                    <input type="radio" id="Comment" name="typeOf" value="Comment">
+                    <label for="Comment">Comment</label>
+                    <div class="orderProbContent">
+                        <input type="text" name="orderNumber" placeholder="ENTER ORDER NUMBER" id="orderNumber"> <br>
+                    </div>
+                </div>
+                <br>
+                <div class="messageArea">
+                    <h2>Enter Your Message Below:</h2>
+                    <br>
+                    <textarea name="message" form="custInfo" placeholder="&nbsp enter your message here..."></textarea>
+                    <input type="hidden" id="myName" name="myName" value="Eliezer Baluyut">
+                </div>
+                <br>
+
+                <h2>Shipping Information</h2> <br>
+                <input type="text" name="address" placeholder="ADDRESS" id="address" required>
+                <input type="text" name="address2" placeholder="APARTMENT,SUITE,ETC" id="address2">
+                <select id="city" name="city">
+                    <option value="" disabled selected>CITY</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Mississauga">Mississauga</option>
+                    <option value="North York">North York</option>
+                    <option value="Brampton">Brampton</option>
+                    <option value="Guelph">Guelph</option>
+                    <option value="London">London</option>
+                    <option value="Caledon">Caledon</option>
+                </select>
+                <select id="country" name="country">
+                    <option value="" disabled selected>COUNTRY</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <input type="text" name="prov" placeholder="PROVINCE" id="province">
+                <!--Here I demonstrate how to use a regex pattern for a postal code validation-->
+                <input type="text" name="pCode" placeholder="POSTAL CODE"
+                    pattern="[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]"
+                    title="Incorrect Postal Code Format. Please Input in A1A B2B or A1AB2B Format">
+                <input type="text" name="phoneNum1" placeholder="PHONE NUMBER" id="phoneNum1"> <br>
+
+                <button type="submit">SUBMIT</button>
+            </form> <br>
+
+        </div>
+    </div>
+    <div class="image-container">
+        <div class="all-mens">
+            <div class="mens-shirts">
+                <div>
+                    <img src='images/mens/mens1.jpg' alt="army green tee">
+                    <div class="caption">
+                        <p>Army Green Tee</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens2.jpg' alt="black tee">
+                    <div class="caption">
+                        <p>Shinobi Tee</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens3.jpg' alt="silver tee">
+                    <div class="caption">
+                        <p>Silver Skies Tee</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+            </div>
+            <div class="tank-tops">
+                <div>
+                    <img src='images/mens/mens4.jpg' alt="shadow tank">
+                    <div class="caption">
+                        <p>Shadow Tank</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens5.jpg' alt="grey tank">
+                    <div class="caption">
+                        <p>Industrial Grey Tank</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens6.jpg' alt="white tank">
+                    <div class="caption">
+                        <p>Angel White Tank</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+            </div>
+            <div class="mens-shorts">
+                <div>
+                    <img src='images/mens/mens7.jpg' alt="white shorts">
+                    <div class="caption">
+                        <p>Cloud White Shorts</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens8.jpg' alt="black shorts">
+                    <div class="caption">
+                        <p>Solid Black Shorts</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens9.jpg' alt="tan shorts">
+                    <div class="caption">
+                        <p>Tan Shorts</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+            </div>
+            <div class="joggers">
+                <div>
+                    <img src='images/mens/mens10.jpg' alt="white joggers">
+                    <div class="caption">
+                        <p>White W/ Black Stripe Joggers</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$59.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens11.jpg' alt="black joggers">
+                    <div class="caption">
+                        <p>All Black Joggers</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$59.99</p>
+                </div>
+                <div>
+                    <img src='images/mens/mens12.jpg' alt="maroon joggers">
+                    <div class="caption">
+                        <p>Maroon Joggers</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$59.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="all-womens">
+            <div class="womens-tops">
+                <div>
+                    <img src='images/womens/womens1.jpg' alt="white tee">
+                    <div class="caption">
+                        <p>Angel White Tee</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens2.jpg' alt="black tee">
+                    <div class="caption">
+                        <p>Shinobi Tee</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens3.jpg' alt="grey tee">
+                    <div class="caption">
+                        <p>Grey Skies Tee</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+            </div>
+            <div class="womens-tanks">
+                <div>
+                    <img src='images/womens/womens4.jpg' alt="white tank">
+                    <div class="caption">
+                        <p>Cloud White Tank</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens5.jpg' alt="pinkish tank">
+                    <div class="caption">
+                        <p>Almost Pink Tank</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens6.jpg' alt="baby blue tank">
+                    <div class="caption">
+                        <p>Baby Blue Tank</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p>$29.99</p>
+                </div>
+            </div>
+            <div class="womens-shorts">
+                <div>
+                    <img src='images/womens/womens7.jpg ' alt="black shorts">
+                    <div class="caption">
+                        <p>Black Shorts</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$29.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens8.jpg' alt="maroon shorts">
+                    <div class="caption">
+                        <p>Maroon Shorts</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$19.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens9.jpg' alt="baby blue shorts">
+                    <div class="caption">
+                        <p>Baby Blue Shorts</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$19.99</p>
+                </div>
+            </div>
+            <div class="womens-pants">
+                <div>
+                    <img src='images/womens/womens10.jpg' alt="black pants">
+                    <div class="caption">
+                        <p>Solid Black Yoga Pants</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$19.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens11.jpg' alt="silver pants">
+                    <div class="caption">
+                        <p>Silver Yoga Pants</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$59.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens12.jpg' alt="pinkish pants">
+                    <div class="caption">
+                        <p>Almost Pink Yoga Pants</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$59.99</p>
+                </div>
+            </div>
+            <div class="womens-lux">
+                <div>
+                    <img src='images/womens/womens13.jpg' alt="yellow-set">
+                    <div class="caption">
+                        <p>West Side Sun - Lux Set</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$120.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens14.jpg' alt="pink-set">
+                    <div class="caption">
+                        <p>The Original Lux - Lux Set</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$120.99</p>
+                </div>
+                <div>
+                    <img src='images/womens/womens15.jpg' alt="grey-set">
+                    <div class="caption">
+                        <p>Silver Skies - Lux Set</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <p class="price">$120.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer-content">ACE FITNESS</p>
+        <form id="footer-newsletter" action="https://formspree.io/mknqydgz" method="POST">
+            <label>
+                Your email:
+                <input type="text" name="_replyto">
+            </label>
+            <button type="submit">SUBCSRIBE</button>
+        </form>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

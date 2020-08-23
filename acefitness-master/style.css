@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  padding: 30px;
+  width: 100%;
+}
+
+.activate-sticky-nav {
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.clothing_submenu {
+  display: none;
+}
+.clothing_submenu:hover {
+  display: block;
+  list-style: none;
+}
+
+.navbar ul li:hover .clothing_submenu {
+  display: block;
+  position: absolute;
+  background-color: black;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 10px;
+}
+
+#logo {
+  display: flex;
+  color: white;
+  letter-spacing: 15px;
+  font-size: 20px;
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+#acelogo {
+  display: inline-flexbox;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
+
+.nav_links {
+  display: flex;
+  width: 40%;
+  height: 30px;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  list-style: none;
+  padding-top: 10px;
+  padding-right: 90px;
+}
+
+.nav_links a:hover {
+  text-decoration: underline;
+}
+
+.nav_links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.feat,
+.news,
+.socials,
+.mens-nav {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.Featured,
+.Newsletter,
+.socialMedia {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 6px;
+  border: 2px soild white;
+  text-align: center;
+  animation: fadeIn_ShopNow 8s;
+}
+
+.Featured a,
+.Newsletter a,
+.socialMedia a {
+  border: 3px solid white;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+#yoga {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(70%);
+}
+#dl {
+  display: block;
+  width: 100%;
+  height: 120vh;
+  filter: brightness(70%);
+}
+
+#shoetie {
+  display: block;
+  width: 100%;
+  height: 120vh;
+  filter: brightness(50%);
+}
+
+@keyframes fadeIn_ShopNow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bg-modal,
+.bg-modalSocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visiblity 0s, opacity 0.8s;
+}
+
+.activate-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content,
+.social-modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  height: 40%;
+  background-color: black;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: xx-large;
+  letter-spacing: 12px;
+}
+
+.socialLogos {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.close-modal,
+.close-social-modal {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+#signup input[type='text'],
+#signup input[type='email'] {
+  padding: 5px 50px;
+  border: 0 none;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: xx-large;
+  flex-wrap: wrap;
+}
+
+#signup input[type='submit'] {
+  margin: 30px;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: large;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.maindynamic-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  padding: 30px;
+  width: 100%;
+}
+
+.dynamic-navlinks-mens,
+.dynamic-navlinks-womens {
+  display: none;
+  justify-content: space-evenly;
+  font-family: 'Poppins', sans-serif;
+  background-color: grey;
+  width: 100%;
+}
+
+.activate-navlinks-mens,
+.activate-navlinks-womens {
+  display: flex;
+}
+.dynamic-navlinks-mens li,
+.dynamic-navlinks-womens li {
+  list-style: none;
+}
+
+.dynamic-nav a:hover {
+  text-decoration: underline;
+}
+
+.dynamic-nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.maindynamic-navbar ul li:hover .clothing_submenu {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  background-color: black;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 10px;
+}
+.dynamic-navlinks {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+.all-mens,
+.all-womens,
+.mens-shirts,
+.tank-tops,
+.mens-shorts,
+.joggers,
+.womens-tops,
+.womens-tanks,
+.womens-shorts,
+.womens-pants,
+.womens-lux {
+  margin: auto;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-container h1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.aboutUs p {
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
+  width: 50%;
+}
+
+.dynamicHeader {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 12px;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUs img {
+  width: 25%;
+  height: 500px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: black solid 2px;
+}
+
+.image-container img{
+  width: 450x;
+  height: 450px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: black solid 2px;
+}
+.caption,
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 38px;
+  font-family: 'Poppins', sans-serif;
+}
+
+figcaption,
+button {
+  font-family: 'Poppins', sans-serif;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#aboutUsIMG {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+.yourCart {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartStatus {
+  width: 50%;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cartStatus p {
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  padding: 30px;
+  text-align: center;
+  font-size: larger;
+}
+
+.customerInformation {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.customerInformation h1,
+h2,
+form {
+  text-align: center;
+}
+#custInfo {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  width: 54.5%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  border: 1px solid black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+}
+.customerInformation input[type='text'],
+input[type='email'],
+input[type='number'] {
+  font-family: 'Poppins', sans-serif;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+}
+
+.remove-flex {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer p {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  letter-spacing: 12px;
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* .typeof {
+  width: 100%;
+  flex-direction: column;
+  justify-content:space-between;
+} */
+
+.typeof label{
+  padding-right: 15px;
+ 
+}
+
+.orderProbContent{
+  display:none;
+  justify-content: center;
+}
+
+.activate-flex {
+  display: flex;
+}
+
+.messageArea textarea{
+   font-family: 'Poppins', sans-serif;
+   width: 100%;
+   height: 25vh;
+}
